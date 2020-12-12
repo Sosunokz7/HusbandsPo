@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HusbandsHelpers.Styles">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ButtonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="ContentControl" x:Key="ContentForStackPanel">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <StackPanel>
+                        <Button Style="{StaticResource FerstButton}" Content="Вверх" Command="{Binding GetUp}" />
+                        <Button  Content="Вниз" Command="{Binding GetDown}" />
+                        <Button Content="Добавить" Command="{Binding Add}" />
+                        <Button Style="{StaticResource LastButton}" Content="Удалить" Command="{Binding Remove}" />
+                        <Grid>
+                            <TextBox Text="{Binding TextForFind,UpdateSourceTrigger=PropertyChanged}" Height="33" Width="140" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" />
+                            <ComboBox Width="160" HorizontalAlignment="Right"  FontSize="15" SelectedIndex="{Binding IndexTypeFind}">
+                                <ComboBoxItem  IsSelected="True">
+                                    <TextBlock Text="Поиск по: Номеру" />
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="{Binding NameRowsForFind}" />
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </Grid>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="StackPanel" x:Key="LeftStackPanel">
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Margin" Value="300,0,0,0"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="HusbandsHelpers.View.PageTables.OrderingsTable"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HusbandsHelpers.View.PageTables"
+      xmlns:vm="clr-namespace:HusbandsHelpers.ViewModel" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OrderingsTable">
+
+    <Page.DataContext>
+        <vm:Ordering/>
+    </Page.DataContext>
+
+
+
+    <Grid Background="White">
+
+
+        <DataGrid  Style="{StaticResource Table}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding GetDown,UpdateSourceTrigger=PropertyChanged,IsAsync=True}" CommandParameter="{Binding SelectedIndex}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <DataGrid.Columns>
+
+                <DataGridTextColumn  Header="Номер заказа" Binding="{Binding id}"  Width="*" />
+                <DataGridTextColumn  Header="Номер мужа" Binding="{Binding husband_id}"  Width="*"/>
+                <DataGridTextColumn  Header="Номер клиента" Binding="{Binding client_id}"  Width="*"/>
+                
+                <DataGridTextColumn Header="Номер услуги" Binding="{Binding number_service}"  Width="*"/>
+
+
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+        <StackPanel Style="{StaticResource LeftStackPanel}"  >
+
+            <ContentControl Style="{StaticResource ContentForStackPanel}"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

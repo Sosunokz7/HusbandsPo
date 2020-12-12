@@ -1,0 +1,100 @@
+﻿<Page x:Class="HusbandsHelpers.View.PageTables.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HusbandsHelpers.View.PageTables"
+      xmlns:vm="clr-namespace:HusbandsHelpers.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AuthorizationPage">
+
+    <Page.DataContext>
+        <vm:Authorization/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Style TargetType="TextBox">
+
+            <Setter Property="Margin" Value="250,0,250,20"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="27"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+
+                        <Grid >
+                            <Border x:Name="FeristBoreder" CornerRadius="10" BorderThickness="6"   BorderBrush="Transparent" >
+                                <ScrollViewer x:Name="PART_ContentHost" Background="White"/>
+                            </Border>
+                            
+
+                            <Grid>
+                                <Border x:Name="border" Margin="3"  CornerRadius="10" BorderThickness="3"  BorderBrush="Black" >
+
+                                </Border>
+
+
+
+                            </Grid>
+                        </Grid>
+
+
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF0366D6"/>
+                                <Setter TargetName="FeristBoreder" Property="BorderBrush" Value="#FFB3D1F3"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button"  BasedOn="{StaticResource GreenButton}">
+            <Setter Property="Margin" Value="250,0,250,10"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="300"/>
+
+
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="250,0,250,10"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="FontSize"  Value="22"/>
+
+
+
+        </Style>
+    </Page.Resources>
+
+    <Grid  Background="White" >
+
+
+
+
+        <StackPanel Orientation="Vertical"   VerticalAlignment="Center"  >
+            <TextBlock Text="Login"/>
+            <TextBox Text="{Binding Login}" />
+
+
+            <TextBlock Text="Password"/>
+            <TextBox Text="{Binding Password}"/>
+            <Button  Command="{Binding Logining}" Content="Login"/>
+        </StackPanel>
+
+        <Frame NavigationUIVisibility="Hidden"  Content="{Binding Menu}"    />
+
+
+
+    </Grid>
+</Page>
+
+

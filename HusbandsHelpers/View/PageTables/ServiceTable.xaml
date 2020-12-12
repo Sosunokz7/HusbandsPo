@@ -1,0 +1,51 @@
+﻿<Page x:Class="HusbandsHelpers.View.PageTables.ServiceTable"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HusbandsHelpers.View.PageTables"
+      xmlns:mv="clr-namespace:HusbandsHelpers.ViewModel"
+      xmlns:converter="clr-namespace:HusbandsHelpers.Settings.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ServiceTable">
+    <Page.DataContext>
+        <mv:Service/>
+    </Page.DataContext>
+
+
+    <Grid Background="White">
+
+        <DataGrid Style="{StaticResource Table}"  >
+            
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+
+                <DataGridTextColumn  Header="Номер клиента" Binding="{Binding id}" Width="*" />
+                <DataGridTextColumn Header="Название" Binding="{Binding name_service}" Width="*" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding price}" Width="*"  />
+                <DataGridTemplateColumn Header="Фото" Width="*" MinWidth="130">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Grid >
+                                <Button Style="{StaticResource ImageTable}" />
+
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Width="300" Margin="300,0,0,0" HorizontalAlignment="Right"  >
+
+            <ContentControl Style="{StaticResource ContentForStackPanel}"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
