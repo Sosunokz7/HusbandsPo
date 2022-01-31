@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\__Result\\_Last_HusbandsHelpers\\HusbandsHelpers\\HusbandsHelpers.csproj": {}
+    "C:\\Users\\Id\\Desktop\\HusbandsPo\\HusbandsHelpers\\HusbandsHelpers.csproj": {}
   },
   "projects": {
-    "D:\\__Result\\_Last_HusbandsHelpers\\HusbandsHelpers\\HusbandsHelpers.csproj": {
+    "C:\\Users\\Id\\Desktop\\HusbandsPo\\HusbandsHelpers\\HusbandsHelpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\__Result\\_Last_HusbandsHelpers\\HusbandsHelpers\\HusbandsHelpers.csproj",
+        "projectUniqueName": "C:\\Users\\Id\\Desktop\\HusbandsPo\\HusbandsHelpers\\HusbandsHelpers.csproj",
         "projectName": "HusbandsHelpers",
-        "projectPath": "D:\\__Result\\_Last_HusbandsHelpers\\HusbandsHelpers\\HusbandsHelpers.csproj",
-        "packagesPath": "C:\\Users\\u317pc7\\.nuget\\packages\\",
-        "outputPath": "D:\\__Result\\_Last_HusbandsHelpers\\HusbandsHelpers\\obj\\",
+        "projectPath": "C:\\Users\\Id\\Desktop\\HusbandsPo\\HusbandsHelpers\\HusbandsHelpers.csproj",
+        "packagesPath": "C:\\Users\\Id\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Id\\Desktop\\HusbandsPo\\HusbandsHelpers\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\u317pc7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Id\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MySql.Data": {
               "target": "Package",
@@ -65,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

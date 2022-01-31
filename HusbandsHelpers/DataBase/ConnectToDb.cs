@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace HusbandsHelpers.DataBase
 {
+	/// <summary>
+	/// Тут должен был бы быть Entity framwork но его нет 
+	/// </summary>
 	class ConnectToDb
 	{
 		private readonly string connectStr;

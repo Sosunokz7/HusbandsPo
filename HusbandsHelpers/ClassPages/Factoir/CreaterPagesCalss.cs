@@ -9,7 +9,10 @@ namespace HusbandsHelpers
 {
 	class CreatePagesCalss
 	{
-
+		/// <summary>
+		/// Это НЕ Фабрика
+		/// </summary>
+		/// <returns></returns>
 		public IEnumerable<IPageForMenu> GetPage()
 		{
 

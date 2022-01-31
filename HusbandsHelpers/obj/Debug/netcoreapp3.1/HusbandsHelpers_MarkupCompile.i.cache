@@ -1,19 +1,19 @@
 ﻿HusbandsHelpers
-
+1.0.0.0
 
 winexe
 C#
 .cs
-D:\__Result\_Last_HusbandsHelpers\HusbandsHelpers\obj\Debug\netcoreapp3.1\
+C:\Users\Id\Desktop\HusbandsPo\HusbandsHelpers\obj\Debug\netcoreapp3.1\
 HusbandsHelpers
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\__Result\_Last_HusbandsHelpers\HusbandsHelpers\App.xaml
-14-880458614
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\Id\Desktop\HusbandsPo\HusbandsHelpers\App.xaml
+14733345431
 
-501348657143
-205-1383262940
+51-1312058644
+205-729111698
 Styles\BaseStyle.xaml;Styles\BoxStyle.xaml;Styles\ButtonStyle.xaml;Styles\LinkStyles.xaml;Styles\ListStyle.xaml;Styles\RightControlerTables.xaml;View\MainMenu.xaml;View\MainWindow.xaml;View\PageTables\AuthorizationPage.xaml;View\PageTables\ClientsTable.xaml;View\PageTables\ContractPage.xaml;View\PageTables\HusbandsTable.xaml;View\PageTables\OrderingsTable.xaml;View\PageTables\ServiceTable.xaml;
 
 False
